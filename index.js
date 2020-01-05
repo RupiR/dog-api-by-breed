@@ -2,7 +2,9 @@
 
 function displayResults(responseJson, breed) {
   console.log(responseJson.message);
-  if (responseJson.message === "Breed not found") {
+  if (
+    responseJson.message === "Breed not found (master breed does not exist)"
+  ) {
     $(".results").append(`<h2>Breed not found- please try again.`);
   } else {
     $(".results").append(`<h2>Here is a ${breed}: </h2>
